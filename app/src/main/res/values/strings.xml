@@ -9,4 +9,7 @@
     <string name="alert_no_button">取消</string>
     <string name="alerm_title">友情提示</string>
     <string name="text_cancel">取消</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

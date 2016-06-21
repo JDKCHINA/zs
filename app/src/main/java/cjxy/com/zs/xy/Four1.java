@@ -29,7 +29,7 @@ public class Four1 extends Activity {
         webview.setWebViewClient(new HelloWebViewClient ());
     }
 
-    @Override
+   /* @Override
     //设置回退
     //覆盖Activity类的onKeyDown(int keyCoder,KeyEvent event)方法
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -46,7 +46,7 @@ public class Four1 extends Activity {
             this.finish();
         }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
 
     //Web视图
     private class HelloWebViewClient extends WebViewClient {

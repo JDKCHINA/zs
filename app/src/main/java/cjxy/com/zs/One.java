@@ -5,11 +5,14 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
 public class One extends Activity {
     private WebView webview;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +23,7 @@ public class One extends Activity {
         //加载需要显示的网页
         webview.loadUrl("file:///android_asset/xygk/xygk.html");
         //设置Web视图
-        webview.setWebViewClient(new HelloWebViewClient ());
+        webview.setWebViewClient(new HelloWebViewClient());
     }
 
     @Override
@@ -32,13 +35,6 @@ public class One extends Activity {
             //goBack()表示返回WebView的上一页面
             return true;
         }
-        else
-        {
-            Intent myIntent = new Intent();
-            myIntent = new Intent(One.this, MainActivity.class);
-            startActivity(myIntent);
-            this.finish();
-        }
         return super.onKeyDown(keyCode, event);
     }
 
@@ -49,5 +45,11 @@ public class One extends Activity {
             view.loadUrl(url);
             return true;
         }
+    }
+
+    @Override
+    public void finish() {
+        Log.i("finist", "finish");
+        super.finish();
     }
 }

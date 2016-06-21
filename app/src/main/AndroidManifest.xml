@@ -1,54 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cjxy.com.zs">
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar">
-        <activity android:name=".TransitionActivity"
+        <activity
+            android:name=".TransitionActivity"
             android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.HomeActivity"/>
-        <activity android:name=".home.DD8"/>
-        <activity android:name=".home.Five"/>
-        <activity android:name=".home.Four"/>
-        <activity android:name=".home.Seven"/>
-        <activity android:name=".home.Six"/>
-        <activity android:name=".home.Nina"/>
-        <activity android:name=".home.Three"/>
-        <activity android:name=".MentionActivity"/>
-        <activity android:name=".MoreActivity"/>
-        <activity android:name=".PersonInfoActivity"/>
-        <activity android:name=".GuideActivity"/>
-        <activity android:name=".MainActivity" android:noHistory= "true"/>
-        <activity android:name=".One"/>
-        <activity android:name=".Second"/>
-        <activity android:name=".xq.Dxq"/>
-        <activity android:name=".xq.Lxq"/>
-        <activity android:name=".xq.Xxq"/>
-        <activity android:name=".xy.One1"/>
-        <activity android:name=".xy.Two1"/>
-        <activity android:name=".xy.Three1"/>
-        <activity android:name=".xy.Five1"/>
-        <activity android:name=".xy.Four1"/>
-
+        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".home.DD8" />
+        <activity android:name=".home.Five" />
+        <activity android:name=".home.Four" />
+        <activity android:name=".home.Seven" />
+        <activity android:name=".home.Six" />
+        <activity android:name=".home.Nina" />
+        <activity android:name=".home.Three" />
+        <activity android:name=".MentionActivity" />
+        <activity android:name=".MoreActivity" />
+        <activity android:name=".PersonInfoActivity" />
+        <activity android:name=".GuideActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true" />
+        <activity android:name=".One" />
+        <activity android:name=".Second" />
+        <activity android:name=".xq.Dxq" />
+        <activity android:name=".xq.Lxq" />
+        <activity android:name=".xq.Xxq" />
+        <activity android:name=".xy.One1" />
+        <activity android:name=".xy.Two1" />
+        <activity android:name=".xy.Three1" />
+        <activity android:name=".xy.Five1" />
+        <activity android:name=".xy.Four1" />
+        <activity android:name=".ui.activity.MyMainActivity"></activity>
     </application>
-
 
 </manifest>

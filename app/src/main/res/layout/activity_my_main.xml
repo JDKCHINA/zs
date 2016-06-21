@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/my_main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/my_main_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/my_main_radio_home"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:checked="true"
+            android:drawableTop="@drawable/tabs_home"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/my_main_radio_mention"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/tabs_sort"
+            android:text="地图" />
+
+        <RadioButton
+            android:id="@+id/my_main_radio_person_info"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/tabs_search"
+            android:text="校园" />
+
+        <RadioButton
+            android:id="@+id/my_main_radio_more"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/tabs_more"
+            android:text="我的" />
+    </RadioGroup>
+
+
+</LinearLayout>

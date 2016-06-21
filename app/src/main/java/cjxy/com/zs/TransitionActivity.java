@@ -9,6 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import cjxy.com.zs.ui.activity.MyMainActivity;
+
 
 /**
  * Created by Anonymous on 2016/3/25.
@@ -21,14 +23,14 @@ public class TransitionActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.transition_view);
         Toast toast = Toast.makeText(TransitionActivity.this, "请保持网络通畅", Toast.LENGTH_SHORT);
         toast.show();
 
-        final SharedPreferences sharedPreferences = getSharedPreferences("is_first_in_data",MODE_PRIVATE);
-        isFirstIn = sharedPreferences.getBoolean("isFirstIn",true);
+        final SharedPreferences sharedPreferences = getSharedPreferences("is_first_in_data", MODE_PRIVATE);
+        isFirstIn = sharedPreferences.getBoolean("isFirstIn", true);
         new Handler().postDelayed(new Runnable() {
 
             @Override
@@ -39,14 +41,12 @@ public class TransitionActivity extends Activity {
                     TransitionActivity.this.startActivity(intent);
                     TransitionActivity.this.finish();
                 } else {
-                    intent = new Intent(TransitionActivity.this, MainActivity.class);
+                    intent = new Intent(TransitionActivity.this, MyMainActivity.class);
                     TransitionActivity.this.startActivity(intent);
                     TransitionActivity.this.finish();
                 }
             }
         }, 2000);
-
-
 
 
     }

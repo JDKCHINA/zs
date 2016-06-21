@@ -15,6 +15,7 @@ import cjxy.com.zs.R;
 
 public class Three extends Activity {
     private WebView webview;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class Three extends Activity {
         //加载需要显示的网页
         webview.loadUrl("http://cjxyxmtyxjg.flzhan.com/index.html");
         //设置Web视图
-        webview.setWebViewClient(new HelloWebViewClient ());
+        webview.setWebViewClient(new HelloWebViewClient());
     }
 
     @Override
@@ -41,13 +42,6 @@ public class Three extends Activity {
             webview.goBack();
             //goBack()表示返回WebView的上一页面
             return true;
-        }
-        else
-        {
-            Intent myIntent = new Intent();
-            myIntent = new Intent(Three.this, MainActivity.class);
-            startActivity(myIntent);
-            this.finish();
         }
         return super.onKeyDown(keyCode, event);
     }
