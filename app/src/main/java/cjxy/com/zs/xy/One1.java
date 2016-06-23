@@ -12,17 +12,18 @@ import cjxy.com.zs.R;
 
 public class One1 extends Activity {
     private WebView webview;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.one);
+        setContentView(R.layout.one1);
         webview = (WebView) findViewById(R.id.webView3);
         //设置WebView属性，能够执行Javascript脚本
         webview.getSettings().setJavaScriptEnabled(true);
         //加载需要显示的网页
         webview.loadUrl("file:///android_asset/xygk/xygk.html");
         //设置Web视图
-        webview.setWebViewClient(new HelloWebViewClient ());
+        webview.setWebViewClient(new HelloWebViewClient());
     }
 
 
@@ -34,6 +35,7 @@ public class One1 extends Activity {
             return true;
         }
     }
+
     @Override
     //设置回退
     //覆盖Activity类的onKeyDown(int keyCoder,KeyEvent event)方法
@@ -42,9 +44,7 @@ public class One1 extends Activity {
             webview.goBack();
             //goBack()表示返回WebView的上一页面
             return true;
-        }
-        else
-        {
+        } else {
             Intent myIntent = new Intent();
             myIntent = new Intent(One1.this, MainActivity.class);
             startActivity(myIntent);
