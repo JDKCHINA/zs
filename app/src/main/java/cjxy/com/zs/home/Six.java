@@ -15,6 +15,7 @@ import cjxy.com.zs.R;
 
 public class Six extends Activity {
     private WebView webview;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +31,10 @@ public class Six extends Activity {
         //加载需要显示的网页
         webview.loadUrl("http://ca.cjxy.edu.cn/zfca/login");
         //设置Web视图
-        webview.setWebViewClient(new HelloWebViewClient ());
+        webview.setWebViewClient(new HelloWebViewClient());
     }
 
-    @Override
+  /*  @Override
     //设置回退
     //覆盖Activity类的onKeyDown(int keyCoder,KeyEvent event)方法
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -42,15 +43,8 @@ public class Six extends Activity {
             //goBack()表示返回WebView的上一页面
             return true;
         }
-        else
-        {
-            Intent myIntent = new Intent();
-            myIntent = new Intent(Six.this, MainActivity.class);
-            startActivity(myIntent);
-            this.finish();
-        }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
 
     //Web视图
     private class HelloWebViewClient extends WebViewClient {
@@ -59,5 +53,15 @@ public class Six extends Activity {
             view.loadUrl(url);
             return true;
         }
+    }
+
+    @Override
+    public void finish() {
+        if (webview.canGoBack()) {
+            webview.goBack();
+        } else {
+            super.finish();
+        }
+
     }
 }

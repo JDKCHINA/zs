@@ -41,6 +41,7 @@ public class HomeFragment extends Fragment {
         webView.loadUrl("file:///android_asset/dtt/demo.html");
         //设置Web视图
         webView.setWebViewClient(new HelloWebViewClient());
+
         ImageButton goSecondActivityButton = (ImageButton) view.findViewById(R.id.imageButton3);
         ImageButton goOneActivityButton = (ImageButton) view.findViewById(R.id.imageButton1);
         ImageButton goThreeActivityButton = (ImageButton) view.findViewById(R.id.imageButton2);

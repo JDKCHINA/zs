@@ -1,5 +1,6 @@
 package cjxy.com.zs.ui.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,9 @@ import cjxy.com.zs.ui.fragment.AtlasFragment;
 import cjxy.com.zs.ui.fragment.CampusFragment;
 import cjxy.com.zs.ui.fragment.HomeFragment;
 import cjxy.com.zs.ui.fragment.MoreFragment;
+import okhttp3.Call;
+import okhttp3.OkHttpClient;
+
 
 public class MyMainActivity extends FragmentActivity {
     private RadioGroup mRadioGroup;
@@ -62,14 +68,16 @@ public class MyMainActivity extends FragmentActivity {
         fragmentList.add(moreFragment);
         pageAdapter = new MyPageAdapter(getSupportFragmentManager(), fragmentList);
         mViewPager.setAdapter(pageAdapter);
-        mViewPager.setOnPageChangeListener(pageChangeListener);
+        mViewPager.addOnPageChangeListener(pageChangeListener);
         mRadioGroup.setOnCheckedChangeListener(checkedChangeListener);
     }
 
     ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+            OkHttpClient okHttpClient = new OkHttpClient();
+            OkHttpUtils okHttpUtils = new OkHttpUtils(okHttpClient);
+            //okHttpUtils.sendFailResultCallback();
         }
 
         @Override
@@ -97,4 +105,5 @@ public class MyMainActivity extends FragmentActivity {
             }
         }
     }
+
 }

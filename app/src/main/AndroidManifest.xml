@@ -24,7 +24,8 @@
         android:theme="@android:style/Theme.NoTitleBar">
         <activity
             android:name=".TransitionActivity"
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
